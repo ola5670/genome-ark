@@ -1,0 +1,243 @@
+/* Tło strony - jasny róż */
+body {
+  font-family: 'Lora', serif;
+  background-color: #f8d9f0; /* Jasny róż */
+  margin: 0;
+  padding: 0;
+  color: #4a2f4d; /* Ciemniejszy kolor tekstu, aby dobrze kontrastował z różowym */
+}
+
+/* Tabela */
+.first-page-table {
+  width: 80%; 
+  max-width: 1200px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff1f8; /* Bardzo jasny różowy dla tabeli */
+  border: 2px solid #e2a7d9; /* Różowa obramówka */
+}
+
+/* Nagłówki tabeli */
+.first-page-table th, .first-page-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #f4d1e3; /* Lekko różowa obramówka komórek */
+}
+
+.first-page-table th {
+  background-color: #f8c8e7;
+  color: #9a3b4f;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Wiersze tabeli */
+.first-page-table tr:nth-child(even) {
+  background-color: #fef6fb; /* Jasny róż dla parzystych wierszy */
+}
+
+.first-page-table tr:nth-child(odd) {
+  background-color: transparent; /* Transparent dla nieparzystych */
+}
+
+/* Tabela listująca zsekwencjonowane zasoby (druga strona) */
+.resources-table {
+  width: 80%; /* Zmieniono na procenty dla lepszej responsywności */
+  max-width: 1200px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff1f8; /* Bardzo jasny różowy dla tabeli */
+  border: 2px solid #e2a7d9; /* Różowa obramówka */
+}
+
+/* Nagłówki tabeli */
+.resources-table th, .resources-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #f4d1e3; /* Lekko różowa obramówka komórek */
+}
+
+.resources-table th {
+  background-color: #f8c8e7;
+  color: #9a3b4f;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Wiersze tabeli */
+.resources-table tr:nth-child(even) {
+  background-color: #7f7f7f; /* Szare tło dla parzystych wierszy */
+}
+
+.resources-table tr:nth-child(odd) {
+  background-color: transparent; /* Transparentne tło dla nieparzystych wierszy */
+}
+
+
+/* Style dla zdjęć */
+img {
+  width: 120px; /* Zwiększono dla lepszej widoczności */
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid #f8a7cc;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Zdjęcia na 1 stronie (domyślne wyśrodkowanie) */
+.species-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Zdjęcia na 2 stronie (wyrównanie do prawej) */
+.species-image.right-side {
+  float: right;
+  top: 20px;  /* Odstęp od górnej krawędzi */
+  right: 20px
+  margin: -20px 0 20px 20px;
+  max-width: 300px;
+}
+
+.species-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid #f8a7cc;
+  transition: transform 0.3s ease;
+}
+
+.species-image img:hover {
+  transform: scale(1.05);
+}
+
+.species-image p {
+  font-size: 14px;
+  color: #4a2f4d;
+  margin-top: 8px;
+}
+
+/* Bionano - czerwony prostokąt */
+.bionano-label {
+  position: absolute;
+  background-color: #ff0000;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  top: -10px;
+  left: -10px;
+  z-index: 10;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Linki - ciemny różowy */
+a {
+  color: #9a3b4f;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #ff6f91;
+}
+
+/* Spis treści */
+.toc {
+  float: left;
+  width: 40%;
+  padding: 20px;
+}
+
+.toc a {
+  display: block;
+  padding: 8px;
+  color: #9a3b4f;
+  background-color: #f8c8e7;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.toc a:hover {
+  background-color: #ff6f91;
+  color: white;
+}
+
+/* Sekcje treści */
+.content {
+  margin-left: 30%;
+  float: right;
+  width: 75%;
+  padding: 20px;
+}
+
+/* Nagłówki sekcji */
+h1, h2, h3 {
+  margin-top: 24px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #9a3b4f;
+}
+
+h1::before,
+h1::after,
+h2::before,
+h2::after,
+h3::before,
+h3::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #f8a7cc;
+  margin: 10px auto;
+}
+
+/* Ikony mediów społecznościowych */
+.social-icons {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  background-color: #ff6f91;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  font-size: 20px;
+}
+
+.social-icons a:hover {
+  background-color: #f8a7cc;
+}
+
+/* Stopka */
+footer {
+  background-color: #f8a7cc;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+}
+
+/* Czyszczenie floatów */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}

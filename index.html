@@ -1,0 +1,60 @@
+---
+layout: default
+title: Genome Ark - Species
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+</head>
+<body>
+
+  <h1>Animal Species</h1>
+
+  <table class="first-page-table">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Scientific Name</th>
+        <th>Common Name</th>
+        <th>Genome Size</th>
+        <th>Project</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for species in site.species %}
+        <tr>
+          <td style="position: relative;">
+            {% for sample in species.samples %}
+              {% if sample.datatype == 'Bionano' %}
+                <div class="bionano-label">Bionano</div>
+              {% endif %}
+            {% endfor %}
+            {% if species.image %}
+              <a href="{{ site.baseurl }}{{ species.url }}">
+                <img src="{{ site.baseurl }}{{ species.image }}" alt="{{ species.name }}" width="100">
+              </a>
+              <p style="text-align: center;">Attribution: {{ species.image_attribution }}</p>
+            {% else %}
+              No Image
+            {% endif %}
+          </td>
+          <td>{{ species.name }}</td>
+          <td>{{ species.common_name }}</td>
+          <td>{{ species.genome_size | number_with_delimiter }}</td>
+          <td>{{ species.project | join: ", " }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <footer>
+    Autor: Aleksandra Pawłowska
+  </footer>
+
+</body>
+</html>
