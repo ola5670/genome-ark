@@ -9,54 +9,67 @@ title: Genome Ark - Home
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
-  <!-- Link do pliku CSS z uwzględnieniem baseurl -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 </head>
 <body>
 
-  <h1>Welcome to Genome Ark</h1>
-  <h2>Animal Species List</h2>
+<h1>Welcome to Genome Ark</h1>
+<h2>Animal Species List</h2>
 
-  <table class="first-page-table">
-    <thead>
+<table class="first-page-table">
+  <thead>
+    <tr>
+      <th>Scientific Name</th>
+      <th>Common Name</th>
+      <th>Family</th>
+      <th>Order</th>
+      <th>Genome Size</th>
+      <th>Project</th>
+      <th>Resources Count</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for species in site.species %}
       <tr>
-        <th>Image</th>
-        <th>Scientific Name</th>
-        <th>Common Name</th>
-        <th>Genome Size</th>
-        <th>Project</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for species in site.species %}
-        <tr>
-          <td style="position: relative;">
-            {% for sample in species.samples %}
-              {% if sample.datatype == 'Bionano' %}
-                <div class="bionano-label">Bionano</div>
-              {% endif %}
-            {% endfor %}
-            {% if species.image %}
-              <a href="{{ site.baseurl }}{{ species.url }}">
-                <img src="{{ site.baseurl }}{{ species.image }}" alt="{{ species.name }}" width="100">
-              </a>
-              <p style="text-align: center;">Attribution: {{ species.image_attribution }}</p>
-            {% else %}
-              No Image
+        <!-- Nazwa po łacinie w kursywie -->
+        <td><em>{{ species.name }}</em></td>
+        <!-- Nazwa angielska -->
+        <td>{{ species.common_name }}</td>
+        <!-- Rodzina -->
+        <td>{{ species.family.name }}</td>
+        <!-- Rząd -->
+        <td>{{ species.order.name }}</td>
+        <!-- Rozmiar genomu -->
+        <td>{{ species.genome_size | number_with_delimiter }}</td>
+        <!-- Projekt -->
+        <td>{{ species.project | join: ", " }}</td>
+        <!-- Liczba zsekwencjonowanych zasobów -->
+        <td>{{ species.samples | size }}</td>
+        <!-- Obrazek -->
+        <td style="position: relative;">
+          {% for sample in species.samples %}
+            {% if sample.datatype == 'Bionano' %}
+              <div class="bionano-label">Bionano</div>
             {% endif %}
-          </td>
-          <td>{{ species.name }}</td>
-          <td>{{ species.common_name }}</td>
-          <td>{{ species.genome_size | number_with_delimiter }}</td>
-          <td>{{ species.project | join: ", " }}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+          {% endfor %}
+          {% if species.image %}
+            <a href="{{ site.baseurl }}{{ species.url }}">
+              <img src="{{ site.baseurl }}{{ species.image }}" alt="{{ species.name }}" width="100">
+            </a>
+            <p style="text-align: center;">Attribution: {{ species.image_attribution }}</p>
+          {% else %}
+            No Image
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
-  <footer>
-    Autor: Aleksandra Pawłowska
-  </footer>
+<footer>
+  Autor: Aleksandra Pawłowska
+</footer>
 
 </body>
 </html>
