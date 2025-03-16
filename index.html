@@ -19,6 +19,7 @@ title: Genome Ark - Home
 <table class="first-page-table">
   <thead>
     <tr>
+      <th>Image</th>
       <th>Scientific Name</th>
       <th>Common Name</th>
       <th>Family</th>
@@ -26,27 +27,12 @@ title: Genome Ark - Home
       <th>Genome Size</th>
       <th>Project</th>
       <th>Resources Count</th>
-      <th>Image</th>
     </tr>
   </thead>
   <tbody>
     {% for species in site.species %}
       <tr>
-        <!-- Nazwa po łacinie w kursywie -->
-        <td><em>{{ species.name }}</em></td>
-        <!-- Nazwa angielska -->
-        <td>{{ species.common_name }}</td>
-        <!-- Rodzina -->
-        <td>{{ species.family.name }}</td>
-        <!-- Rząd -->
-        <td>{{ species.order.name }}</td>
-        <!-- Rozmiar genomu -->
-        <td>{{ species.genome_size | number_with_delimiter }}</td>
-        <!-- Projekt -->
-        <td>{{ species.project | join: ", " }}</td>
-        <!-- Liczba zsekwencjonowanych zasobów -->
-        <td>{{ species.samples | size }}</td>
-        <!-- Obrazek -->
+        <!-- Obrazek na pierwszym miejscu -->
         <td style="position: relative;">
           {% for sample in species.samples %}
             {% if sample.datatype == 'Bionano' %}
@@ -62,6 +48,20 @@ title: Genome Ark - Home
             No Image
           {% endif %}
         </td>
+        <!-- Nazwa po łacinie w kursywie -->
+        <td><em>{{ species.name }}</em></td>
+        <!-- Nazwa angielska -->
+        <td>{{ species.common_name }}</td>
+        <!-- Rodzina -->
+        <td>{{ species.family.name }}</td>
+        <!-- Rząd -->
+        <td>{{ species.order.name }}</td>
+        <!-- Rozmiar genomu -->
+        <td>{{ species.genome_size | number_with_delimiter }}</td>
+        <!-- Projekt -->
+        <td>{{ species.project | join: ", " }}</td>
+        <!-- Liczba zsekwencjonowanych zasobów -->
+        <td>{{ species.samples | size }}</td>
       </tr>
     {% endfor %}
   </tbody>
