@@ -7,7 +7,6 @@ body {
   color: #4a2f4d; /* Ciemniejszy kolor tekstu, aby dobrze kontrastował z różowym */
 }
 
-
 /* Tabela */
 .first-page-table {
   width: 80%; 
@@ -18,7 +17,6 @@ body {
   background-color: #fff1f8; /* Bardzo jasny różowy dla tabeli */
   border: 2px solid #e2a7d9; /* Różowa obramówka */
 } 
-
 
 /* Nagłówki tabeli */
 .first-page-table th, .first-page-table td {
