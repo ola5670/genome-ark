@@ -8,15 +8,22 @@ body {
 }
 
 /* Tabela */
+/* Kontener centrowany */
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Tabela */
 .first-page-table {
   width: 80%; 
   max-width: 1200px;
-  margin: 10px auto;
   border-collapse: collapse;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background-color: #fff1f8; /* Bardzo jasny różowy dla tabeli */
   border: 2px solid #e2a7d9; /* Różowa obramówka */
 }
+
 
 /* Nagłówki tabeli */
 .first-page-table th, .first-page-table td {
