@@ -1,14 +1,22 @@
 ---
 layout: default
-title: Genome Ark - Home
+title: Genome Ark - Species
 ---
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genome Ark - Species</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+</head>
+<body>
 <h1>Welcome to Genome Ark</h1>
 <h2>Animal Species List</h2>
-
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 
-<!-- Tylko na stronie głównej (first page) -->
 {% if page.url == "/" %}
   <table class="first-page-table">
     <thead>
@@ -26,7 +34,6 @@ title: Genome Ark - Home
     <tbody>
       {% for species in site.species %}
         <tr>
-          <!-- Image section -->
           <td style="position: relative;">
             {% for sample in species.samples %}
               {% if sample.datatype == 'Bionano' %}
@@ -42,19 +49,12 @@ title: Genome Ark - Home
               No Image
             {% endif %}
           </td>
-          <!-- Scientific name in italics -->
           <td><em>{{ species.name }}</em></td>
-          <!-- Common name -->
           <td>{{ species.common_name }}</td>
-          <!-- Family -->
           <td>{{ species.family.name }}</td>
-          <!-- Order -->
           <td>{{ species.order.name }}</td>
-          <!-- Genome size -->
           <td>{{ species.genome_size | number_with_delimiter }}</td>
-          <!-- Project -->
           <td>{{ species.project | join: ", " }}</td>
-          <!-- Number of resources -->
           <td>{{ species.samples | size }}</td>
         </tr>
       {% endfor %}
