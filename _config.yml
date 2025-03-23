@@ -18,25 +18,43 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "genome-ark" # the subpath of your site, e.g. /blog
-url: "https://ola5670.github.io/genome-ark/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
-
-# Build settings
-plugins:
-  - jekyll-feed
-
-
-collections:
-  species:
-    output: true
+title: "Genome Ark"
+ email: "ola.pawlowska@gmail.com"
+ description: "Welcome to the Genome Ark Species Database! This site provides detailed information on various species, their taxonomy, and sequenced genomic resources. Explore in-depth data about different organisms, discover their genetic sequences, and access resources for research and study. The Genome Ark aims to be a comprehensive hub for genomic data, helping researchers, scientists, and enthusiasts alike in their quest to understand the diversity of life on Earth."
+ baseurl: ""
+ url: "" 
+ twitter_username: "jekyllrb"
+ github_username: "jekyll"
+ author: "Aleksandra Pawłowska" 
+ 
+ plugins:
+   - jekyll-feed
+ markdown: kramdown
+ highlighter: rouge
+ theme: minima
+ 
+ # Collections
+ collections:
+   species:
+     output: true
+ 
+ include:
+   - _layouts
+   - _includes
+ 
+ permalink: pretty
+ 
+ exclude:
+   - .sass-cache/
+   - .jekyll-cache/
+   - gemfiles/
+   - Gemfile
+   - Gemfile.lock
+   - node_modules/
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
