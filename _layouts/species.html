@@ -10,7 +10,7 @@
 <body>
 
 <div class="container">
-  <!-- Spis treści -->
+
   <nav class="toc">
     <ul>
       <li><a href="#taxonomy">🧬 Taxonomy</a></li>
@@ -18,21 +18,17 @@
       <li><a href="#description">📖 Description</a></li>
     </ul>
   </nav>
-  <!-- Obrazek gatunku -->
-    {% if page.image %}
-      <div class="species-image right-side">
-        <img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.name }}">
-        <p>Attribution: {{ page.image_attribution }}</p>
-      </div>
-    {% endif %}
-  <!-- Zawartość strony -->
+  
+  {% if page.image %}
+    <div class="species-image right-side">
+      <img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.name }}">
+      <p>Attribution: {{ page.image_attribution }}</p>
+    </div>
+  {% endif %}
+  
   <main class="content">
-    <!-- Nazwa gatunku -->
-    
     <h1>{{ page.name }} <small>({{ page.common_name }})</small></h1>
 
-
-    <!-- Sekcja taksonomia -->
     <section id="taxonomy">
       <h2>Taxonomy</h2>
       <ul>
@@ -41,7 +37,6 @@
       </ul>
     </section>
 
-    <!-- Sekcja zasobów -->
     <section id="resources">
       <h2>Sequenced Resources</h2>
       <table class="resources-table">
@@ -72,7 +67,6 @@
       </table>
     </section>
 
-    <!-- Sekcja opisu gatunku -->
     <section id="description">
       <h2>Species Description</h2>
       {{ content }}
@@ -80,7 +74,6 @@
   </main>
 </div>
 
-<!-- Ikony społecznościowe -->
 <div class="social-icons">
   <a href="https://www.facebook.com" target="_blank">🌐 Facebook</a>
   <a href="https://twitter.com" target="_blank">🐦 Twitter</a>
@@ -88,4 +81,4 @@
 </div>
 
 </body>
-</html>
+</html> 
