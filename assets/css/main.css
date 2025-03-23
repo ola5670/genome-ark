@@ -7,13 +7,6 @@ body {
   color: #4a2f4d; /* Ciemniejszy kolor tekstu, aby dobrze kontrastował z różowym */
 }
 
-.first-page-table {
-  width: 80% !important;
-  border-collapse: collapse !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-  background-color: #fff1f8 !important;
-  border: 2px solid #e2a7d9 !important;
-}
 
 /* Nagłówki tabeli */
 .first-page-table th, .first-page-table td {
