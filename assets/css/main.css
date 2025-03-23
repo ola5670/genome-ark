@@ -7,6 +7,7 @@ body {
   color: #4a2f4d; /* Ciemniejszy kolor tekstu, aby dobrze kontrastował z różowym */
 }
 
+/* Tabela na pierwszej stronie */
 .first-page-table {
   width: 80% !important;
   max-width: 1200px !important;
@@ -74,7 +75,6 @@ body {
   background-color: transparent; /* Transparentne tło dla nieparzystych wierszy */
 }
 
-
 /* Style dla zdjęć */
 img {
   width: 120px; /* Zwiększono dla lepszej widoczności */
@@ -98,7 +98,7 @@ img:hover {
 .species-image.right-side {
   float: right;
   top: 20px;  /* Odstęp od górnej krawędzi */
-  right: 20px
+  right: 20px;
   margin: -20px 0 20px 20px;
   max-width: 300px;
 }
@@ -168,11 +168,19 @@ a:hover {
   color: white;
 }
 
-/* Sekcje treści */
-.content {
-  margin-left: 30%;
-  float: right;
-  width: 75%;
+/* Sekcje treści - Zmiany zaczynają się tutaj */
+
+/* Pierwsza strona - wyśrodkowanie treści */
+.first-page .content {
+  margin: 0 auto;
+  width: 80%; /* Możesz dostosować szerokość */
+  padding: 20px;
+}
+
+/* Druga strona - treść przesunięta w prawo */
+.second-page .content {
+  margin-left: 30%; /* Przesunięcie treści w prawo */
+  width: 70%; /* Możesz dostosować szerokość */
   padding: 20px;
 }
 
