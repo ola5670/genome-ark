@@ -7,56 +7,114 @@ title: Genome Ark - Home
 <h2>Animal Species List</h2>
 
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
-<table class="first-page-table">
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Scientific Name</th>
-      <th>Common Name</th>
-      <th>Family</th>
-      <th>Order</th>
-      <th>Genome Size</th>
-      <th>Project</th>
-      <th>Resources Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for species in site.species %}
+
+<!-- Pierwsza strona z wyśrodkowaną tabelą -->
+<div class="first-page">
+  <table class="first-page-table">
+    <thead>
       <tr>
-        <!-- Image section -->
-        <td style="position: relative;">
-          {% for sample in species.samples %}
-            {% if sample.datatype == 'Bionano' %}
-              <div class="bionano-label">Bionano</div>
-            {% endif %}
-          {% endfor %}
-          {% if species.image %}
-            <a href="{{ site.baseurl }}{{ species.url }}">
-              <img src="{{ site.baseurl }}{{ species.image }}" alt="{{ species.name }}" width="100">
-            </a>
-            <p style="text-align: center;">Attribution: {{ species.image_attribution }}</p>
-          {% else %}
-            No Image
-          {% endif %}
-        </td>
-        <!-- Scientific name in italics -->
-        <td><em>{{ species.name }}</em></td>
-        <!-- Common name -->
-        <td>{{ species.common_name }}</td>
-        <!-- Family -->
-        <td>{{ species.family.name }}</td>
-        <!-- Order -->
-        <td>{{ species.order.name }}</td>
-        <!-- Genome size -->
-        <td>{{ species.genome_size | number_with_delimiter }}</td>
-        <!-- Project -->
-        <td>{{ species.project | join: ", " }}</td>
-        <!-- Number of resources -->
-        <td>{{ species.samples | size }}</td>
+        <th>Image</th>
+        <th>Scientific Name</th>
+        <th>Common Name</th>
+        <th>Family</th>
+        <th>Order</th>
+        <th>Genome Size</th>
+        <th>Project</th>
+        <th>Resources Count</th>
       </tr>
-    {% endfor %}
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      {% for species in site.species %}
+        <tr>
+          <!-- Image section -->
+          <td style="position: relative;">
+            {% for sample in species.samples %}
+              {% if sample.datatype == 'Bionano' %}
+                <div class="bionano-label">Bionano</div>
+              {% endif %}
+            {% endfor %}
+            {% if species.image %}
+              <a href="{{ site.baseurl }}{{ species.url }}">
+                <img src="{{ site.baseurl }}{{ species.image }}" alt="{{ species.name }}" width="100">
+              </a>
+              <p style="text-align: center;">Attribution: {{ species.image_attribution }}</p>
+            {% else %}
+              No Image
+            {% endif %}
+          </td>
+          <!-- Scientific name in italics -->
+          <td><em>{{ species.name }}</em></td>
+          <!-- Common name -->
+          <td>{{ species.common_name }}</td>
+          <!-- Family -->
+          <td>{{ species.family.name }}</td>
+          <!-- Order -->
+          <td>{{ species.order.name }}</td>
+          <!-- Genome size -->
+          <td>{{ species.genome_size | number_with_delimiter }}</td>
+          <!-- Project -->
+          <td>{{ species.project | join: ", " }}</td>
+          <!-- Number of resources -->
+          <td>{{ species.samples | size }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<!-- Druga strona z treścią przesuniętą w prawo -->
+<div class="second-page">
+  <table class="resources-table">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Scientific Name</th>
+        <th>Common Name</th>
+        <th>Family</th>
+        <th>Order</th>
+        <th>Genome Size</th>
+        <th>Project</th>
+        <th>Resources Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for species in site.species %}
+        <tr>
+          <!-- Image section -->
+          <td style="position: relative;">
+            {% for sample in species.samples %}
+              {% if sample.datatype == 'Bionano' %}
+                <div class="bionano-label">Bionano</div>
+              {% endif %}
+            {% endfor %}
+            {% if species.image %}
+              <a href="{{ site.baseurl }}{{ species.url }}">
+                <img src="{{ site.baseurl }}{{ species.image }}" alt="{{ species.name }}" width="100">
+              </a>
+              <p style="text-align: center;">Attribution: {{ species.image_attribution }}</p>
+            {% else %}
+              No Image
+            {% endif %}
+          </td>
+          <!-- Scientific name in italics -->
+          <td><em>{{ species.name }}</em></td>
+          <!-- Common name -->
+          <td>{{ species.common_name }}</td>
+          <!-- Family -->
+          <td>{{ species.family.name }}</td>
+          <!-- Order -->
+          <td>{{ species.order.name }}</td>
+          <!-- Genome size -->
+          <td>{{ species.genome_size | number_with_delimiter }}</td>
+          <!-- Project -->
+          <td>{{ species.project | join: ", " }}</td>
+          <!-- Number of resources -->
+          <td>{{ species.samples | size }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
 
 <footer>
   Autor: Aleksandra Pawłowska
