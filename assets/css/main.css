@@ -8,8 +8,7 @@ body {
 }
 
 /* Tabela */
-.first-page-table {
-  width: 80%; 
+.first-page-table { 
   margin-left: 10px; /* Przesunięcie tabeli w lewo */
   border-collapse: collapse;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
