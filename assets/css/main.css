@@ -7,15 +7,15 @@ body {
   color: #4a2f4d; /* Ciemniejszy kolor tekstu, aby dobrze kontrastował z różowym */
 }
 
-/* Tabela */
-.first-page-table { 
-  margin-left: 10px; /* Przesunięcie tabeli w lewo */
-  border-collapse: collapse;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: #fff1f8; /* Bardzo jasny różowy dla tabeli */
-  border: 2px solid #e2a7d9; /* Różowa obramówka */
-} 
-
+.first-page-table {
+  width: 80% !important;
+  max-width: 1200px !important;
+  margin: 20px auto !important;
+  border-collapse: collapse !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  background-color: #fff1f8 !important;
+  border: 2px solid #e2a7d9 !important;
+}
 
 /* Nagłówki tabeli */
 .first-page-table th, .first-page-table td {
