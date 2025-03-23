@@ -7,15 +7,13 @@ body {
   color: #4a2f4d; /* Ciemniejszy kolor tekstu, aby dobrze kontrastował z różowym */
 }
 
-/* Tabela na pierwszej stronie */
+/* Tabela */
 .first-page-table {
-  width: 80% !important;
-  max-width: 1200px !important;
-  margin: 20px auto !important;
-  border-collapse: collapse !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-  background-color: #fff1f8 !important;
-  border: 2px solid #e2a7d9 !important;
+  width: 2200; 
+  border-collapse: collapse;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff1f8; /* Bardzo jasny różowy dla tabeli */
+  border: 2px solid #e2a7d9; /* Różowa obramówka */
 }
 
 /* Nagłówki tabeli */
@@ -44,8 +42,8 @@ body {
 /* Tabela listująca zsekwencjonowane zasoby (druga strona) */
 .resources-table {
   width: 80%; /* Zmieniono na procenty dla lepszej responsywności */
-  max-width: 1000px;
-  margin: 30px auto;
+  max-width: 1200px;
+  margin: 20px auto;
   border-collapse: collapse;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background-color: #fff1f8; /* Bardzo jasny różowy dla tabeli */
@@ -75,6 +73,7 @@ body {
   background-color: transparent; /* Transparentne tło dla nieparzystych wierszy */
 }
 
+
 /* Style dla zdjęć */
 img {
   width: 120px; /* Zwiększono dla lepszej widoczności */
@@ -98,7 +97,7 @@ img:hover {
 .species-image.right-side {
   float: right;
   top: 20px;  /* Odstęp od górnej krawędzi */
-  right: 20px;
+  right: 20px
   margin: -20px 0 20px 20px;
   max-width: 300px;
 }
@@ -168,19 +167,11 @@ a:hover {
   color: white;
 }
 
-/* Sekcje treści - Zmiany zaczynają się tutaj */
-
-/* Pierwsza strona - wyśrodkowanie treści */
-.first-page .content {
-  margin: 0 auto;
-  width: 80%; /* Możesz dostosować szerokość */
-  padding: 20px;
-}
-
-/* Druga strona - treść przesunięta w prawo */
-.second-page .content {
-  margin-left: 30%; /* Przesunięcie treści w prawo */
-  width: 70%; /* Możesz dostosować szerokość */
+/* Sekcje treści */
+.content {
+  margin-left: 30%;
+  float: right;
+  width: 75%;
   padding: 20px;
 }
 
