@@ -7,16 +7,17 @@ body {
   color: #4a2f4d; /* Ciemniejszy kolor tekstu, aby dobrze kontrastował z różowym */
 }
 
-/* Tabela */
 .first-page-table {
   width: 80%; 
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 20px auto; /* Wyśrodkowanie tabeli */
   border-collapse: collapse;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background-color: #fff1f8; /* Bardzo jasny różowy dla tabeli */
   border: 2px solid #e2a7d9; /* Różowa obramówka */
-} 
+  margin-left: auto; /* Zapewnia wyśrodkowanie */
+  margin-right: auto; /* Zapewnia wyśrodkowanie */
+}
 
 /* Nagłówki tabeli */
 .first-page-table th, .first-page-table td {
@@ -103,6 +104,16 @@ img:hover {
   margin: -20px 0 20px 20px;
   max-width: 300px;
 }
+/* Tło białe dla opisów na drugiej stronie */
+.description-container {
+  background-color: white; /* Białe tło dla opisów */
+  padding: 20px; /* Dodajemy padding dla lepszego wyglądu */
+  border-radius: 8px; /* Zaokrąglone rogi */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Lekki cień dla lepszej widoczności */
+  margin: 20px auto; /* Wyśrodkowanie kontenera */
+  max-width: 1000px; /* Maksymalna szerokość kontenera */
+}
+
 
 .species-image img {
   width: 100%;
