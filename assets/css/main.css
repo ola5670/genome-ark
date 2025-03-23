@@ -7,13 +7,14 @@ body {
   color: #4a2f4d; /* Ciemniejszy kolor tekstu, aby dobrze kontrastował z różowym */
 }
 
-/* Tabela */
 .first-page-table {
-  width: 2200; 
-  border-collapse: collapse;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: #fff1f8; /* Bardzo jasny różowy dla tabeli */
-  border: 2px solid #e2a7d9; /* Różowa obramówka */
+  width: 80% !important;
+  max-width: 1200px !important;
+  margin: 20px auto !important;
+  border-collapse: collapse !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  background-color: #fff1f8 !important;
+  border: 2px solid #e2a7d9 !important;
 }
 
 /* Nagłówki tabeli */
@@ -42,8 +43,8 @@ body {
 /* Tabela listująca zsekwencjonowane zasoby (druga strona) */
 .resources-table {
   width: 80%; /* Zmieniono na procenty dla lepszej responsywności */
-  max-width: 1200px;
-  margin: 20px auto;
+  max-width: 1000px;
+  margin: 30px auto;
   border-collapse: collapse;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background-color: #fff1f8; /* Bardzo jasny różowy dla tabeli */
@@ -238,4 +239,4 @@ footer {
   content: "";
   display: table;
   clear: both;
-}
+} 
