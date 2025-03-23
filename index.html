@@ -8,21 +8,27 @@ title: Genome Ark - Species
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+  <title>Genome Ark - Species</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+
 </head>
 <body>
+<h1>Welcome to Genome Ark</h1>
+<h2>Animal Species List</h2>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 
-  <h1>Animal Species</h1>
-
+{% if page.url == "/" %}
   <table class="first-page-table">
     <thead>
       <tr>
         <th>Image</th>
         <th>Scientific Name</th>
         <th>Common Name</th>
+        <th>Family</th>
+        <th>Order</th>
         <th>Genome Size</th>
         <th>Project</th>
+        <th>Resources Count</th>
       </tr>
     </thead>
     <tbody>
@@ -43,18 +49,19 @@ title: Genome Ark - Species
               No Image
             {% endif %}
           </td>
-          <td>{{ species.name }}</td>
+          <td><em>{{ species.name }}</em></td>
           <td>{{ species.common_name }}</td>
+          <td>{{ species.family.name }}</td>
+          <td>{{ species.order.name }}</td>
           <td>{{ species.genome_size | number_with_delimiter }}</td>
           <td>{{ species.project | join: ", " }}</td>
+          <td>{{ species.samples | size }}</td>
         </tr>
       {% endfor %}
     </tbody>
   </table>
+{% endif %}
 
-  <footer>
-    Autor: Aleksandra Pawłowska
-  </footer>
-
-</body>
-</html>
+<footer>
+  Autor: Aleksandra Pawłowska
+</footer>
