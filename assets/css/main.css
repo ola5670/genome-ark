@@ -45,8 +45,8 @@ body {
 /* Tabela listująca zsekwencjonowane zasoby (druga strona) */
 .resources-table {
   width: 80%; /* Zmieniono na procenty dla lepszej responsywności */
-  max-width: 1200px;
-  margin: 20px auto;
+  max-width: 1000px;
+  margin: 30px auto;
   border-collapse: collapse;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background-color: #fff1f8; /* Bardzo jasny różowy dla tabeli */
@@ -104,16 +104,6 @@ img:hover {
   margin: -20px 0 20px 20px;
   max-width: 300px;
 }
-/* Tło białe dla opisów na drugiej stronie */
-.description-container {
-  background-color: white; /* Białe tło dla opisów */
-  padding: 20px; /* Dodajemy padding dla lepszego wyglądu */
-  border-radius: 8px; /* Zaokrąglone rogi */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Lekki cień dla lepszej widoczności */
-  margin: 20px auto; /* Wyśrodkowanie kontenera */
-  max-width: 1000px; /* Maksymalna szerokość kontenera */
-}
-
 
 .species-image img {
   width: 100%;
